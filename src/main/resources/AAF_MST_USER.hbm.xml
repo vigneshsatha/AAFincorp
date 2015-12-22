@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.aaf.fincorp.model.UserVO" table="aaf_mst_user">
+        <id name="id" type="java.lang.Integer">
+            <column name="num_user_id"/>
+            <generator class="assigned"/>
+        </id> 
+        <property name="userName" type="string">
+            <column name ="vch_user_name" length="30" not-null="true" unique="true"/>
+        </property>
+        <property name="userPassword" type="string">
+            <column name ="vch_password" length="30" not-null="true" unique="false"/>
+        </property>
+        <property name="firstName" type="string" length="50">
+            <column name ="vch_first_name" length="50" not-null="true" unique="false"/>
+        </property>
+        <property name="lastName" type="string">
+            <column name ="vch_last_name" length="50" not-null="true" unique="false"/>
+        </property>
+    </class>
+</hibernate-mapping>
