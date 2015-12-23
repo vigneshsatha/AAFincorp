@@ -16,6 +16,8 @@ public class UserVO implements Serializable {
     private String userName;
     private String userPassword;
     private int id;
+    private byte[] pwdKey;
+    private byte[] pwdEncyrpt;
     
     public UserVO() {
     }
@@ -67,4 +69,21 @@ public class UserVO implements Serializable {
     public void setId(int id) {
         this.id = id;
     }
+
+    public byte[] getPwdKey() {
+        return pwdKey;
+    }
+
+    public void setPwdKey(byte[] pwdKey) {
+        this.pwdKey = pwdKey;
+    }
+
+    public byte[] getPwdEncyrpt() {
+        return pwdEncyrpt;
+    }
+
+    public void setPwdEncyrpt(byte[] pwdEncyrpt) {
+        this.pwdEncyrpt = pwdEncyrpt;
+    }
+    
 }
