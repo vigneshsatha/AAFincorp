@@ -9,6 +9,8 @@ package com.aaf.fincorp.model;
  * @author VIC
  */
 public class ClientVO {
+
+    private Long clientId;
     private String clientFirstName;
     private String clientLastName;
     private String dob;
@@ -20,7 +22,8 @@ public class ClientVO {
     private String guranteePersonProofId;
     private String address;
 
-    public ClientVO(String clientFirstName, String clientLastName, String dob, int age, String mobileNo, String proofType, String proofId, String guranteePersonName, String guranteePersonProofId, String address) {
+    public ClientVO(Long clientId,String clientFirstName, String clientLastName, String dob, int age, String mobileNo, String proofType, String proofId, String guranteePersonName, String guranteePersonProofId, String address) {
+        this.clientId = clientId;
         this.clientFirstName = clientFirstName;
         this.clientLastName = clientLastName;
         this.dob = dob;
@@ -34,6 +37,13 @@ public class ClientVO {
     }
 
     
+    public Long getClientId() {
+        return clientId;
+    }
+
+    public void setClientId(Long clientId) {
+        this.clientId = clientId;
+    }
     public ClientVO() {
     }
     
