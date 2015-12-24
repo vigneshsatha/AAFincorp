@@ -59,52 +59,52 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.6</version>
         </dependency>
-<dependency>
-		<groupId>hibernate</groupId>
-		<artifactId>hibernate3</artifactId>
-		<version>3.2.4.SP1_CP08-brew</version>
-    <type>jar</type>
-</dependency>
+        <dependency>
+            <groupId>hibernate</groupId>
+            <artifactId>hibernate3</artifactId>
+            <version>3.2.4.SP1_CP08-brew</version>
+            <type>jar</type>
+        </dependency>
 	
-	<!-- Hibernate annotation -->
-	<dependency>
-		<groupId>hibernate-annotations</groupId>
-		<artifactId>hibernate-annotations</artifactId>
-		<version>3.3.1.GA_CP01-brew</version>
-	    <type>jar</type>
-	</dependency>
+        <!-- Hibernate annotation -->
+        <dependency>
+            <groupId>hibernate-annotations</groupId>
+            <artifactId>hibernate-annotations</artifactId>
+            <version>3.3.1.GA_CP01-brew</version>
+            <type>jar</type>
+        </dependency>
  
-	<dependency>
-		<groupId>hibernate-commons-annotations</groupId>
-		<artifactId>hibernate-commons-annotations</artifactId>
-		<version>3.0.0.GA</version>
-	</dependency>
+        <dependency>
+            <groupId>hibernate-commons-annotations</groupId>
+            <artifactId>hibernate-commons-annotations</artifactId>
+            <version>3.0.0.GA</version>
+        </dependency>
 	
-	<!-- Hibernate library dependecy start -->
-	<dependency>
-		<groupId>dom4j</groupId>
-		<artifactId>dom4j</artifactId>
-		<version>1.6.1</version>
-	</dependency>
+        <!-- Hibernate library dependecy start -->
+        <dependency>
+            <groupId>dom4j</groupId>
+            <artifactId>dom4j</artifactId>
+            <version>1.6.1</version>
+        </dependency>
 	
-	<dependency>
-		<groupId>commons-logging</groupId>
-		<artifactId>commons-logging</artifactId>
-		<version>1.1.1</version>
-	</dependency>
+        <dependency>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+            <version>1.1.1</version>
+        </dependency>
 	
-	<dependency>
-		<groupId>commons-collections</groupId>
-		<artifactId>commons-collections</artifactId>
-		<version>3.2.1</version>
-	</dependency>
+        <dependency>
+            <groupId>commons-collections</groupId>
+            <artifactId>commons-collections</artifactId>
+            <version>3.2.1</version>
+        </dependency>
 	
-	<dependency>
-		<groupId>antlr</groupId>
-		<artifactId>antlr</artifactId>
-		<version>2.7.7</version>
-	</dependency>
-                <dependency>
+        <dependency>
+            <groupId>antlr</groupId>
+            <artifactId>antlr</artifactId>
+            <version>2.7.7</version>
+        </dependency>
+        <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-jdbc</artifactId>
             <version>4.2.3.RELEASE</version>
@@ -130,15 +130,15 @@
             <artifactId>ejb3-persistence</artifactId>
             <version>1.0.1.GA</version>
         </dependency>
-<dependency>
-   <groupId>org.springframework</groupId>
-   <artifactId>spring-orm</artifactId>
-   <version>4.1.6.RELEASE</version>
-</dependency>
-<dependency>
-   <groupId>org.hibernate</groupId>
-   <artifactId>hibernate-ehcache</artifactId>
-   <version>3.3.2.GA</version>
-</dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-orm</artifactId>
+            <version>4.1.6.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-ehcache</artifactId>
+            <version>3.3.2.GA</version>
+        </dependency>
     </dependencies>
 </project>
