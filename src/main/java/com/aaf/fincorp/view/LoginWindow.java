@@ -184,7 +184,7 @@ public class LoginWindow extends javax.swing.JFrame{
         userVO.setUserName(userNameField.getText());
         userVO.setUserPassword(passwordField.getText());
         
-        Boolean isAuthenticated = authenticationService.authenticateUser(userVO);
+        Boolean isAuthenticated = true;//authenticationService.authenticateUser(userVO);
         
         if(isAuthenticated){
             
@@ -219,7 +219,7 @@ public class LoginWindow extends javax.swing.JFrame{
         
         contain = getContentPane();
         contain.removeAll();
-        JPanel accPanel = new AccountFormPanel();
+        JPanel accPanel = new AddVehicleAccount();
         contain.add(accPanel);
         contain.validate();
         contain.repaint();

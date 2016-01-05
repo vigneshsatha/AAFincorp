@@ -1,4 +1,4 @@
-package com.aaf.fincorp.utilitiesl;
+package com.aaf.fincorp.utilities;
 
 
 import com.aaf.fincorp.model.UserVO;

@@ -9,8 +9,11 @@
         <property name="userName" type="string">
             <column name ="vch_user_name" length="30" not-null="true" unique="true"/>
         </property>
-        <property name="userPassword" type="string">
-            <column name ="vch_password" length="30" not-null="true" unique="false"/>
+        <property name="pwdEncyrpt" type="binary">
+            <column name ="vch_password" length="100" not-null="true" unique="false"/>
+        </property>
+        <property name="pwdKey" type="binary">
+            <column name ="vch_password_key" length="100" not-null="true" unique="false"/>
         </property>
         <property name="firstName" type="string" length="50">
             <column name ="vch_first_name" length="50" not-null="true" unique="false"/>
