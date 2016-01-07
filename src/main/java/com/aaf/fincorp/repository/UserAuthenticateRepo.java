@@ -5,10 +5,7 @@
 package com.aaf.fincorp.repository;
 
 import com.aaf.fincorp.model.UserVO;
-import java.beans.Transient;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
 
 /**
  *
@@ -16,5 +13,5 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Component
 public interface UserAuthenticateRepo {
-    public boolean authenticateUser(UserVO userVO);
+    public UserVO authenticateUser(UserVO userVO);
 }

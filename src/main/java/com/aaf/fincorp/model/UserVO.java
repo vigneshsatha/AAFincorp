@@ -16,18 +16,10 @@ public class UserVO implements Serializable {
     private String userName;
     private String userPassword;
     private int id;
-    private byte[] pwdKey;
-    private byte[] pwdEncyrpt;
+    private String pwdKey;
+    private String pwdEncyrpt;
     
     public UserVO() {
-    }
-
-    public UserVO(String firstName, String lastName, String userName, String userPassword, int id) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.userName = userName;
-        this.userPassword = userPassword;
-        this.id = id;
     }
 
     public String getFirstName() {
@@ -70,20 +62,20 @@ public class UserVO implements Serializable {
         this.id = id;
     }
 
-    public byte[] getPwdKey() {
+    public String getPwdKey() {
         return pwdKey;
     }
 
-    public void setPwdKey(byte[] pwdKey) {
+    public void setPwdKey(String pwdKey) {
         this.pwdKey = pwdKey;
     }
 
-    public byte[] getPwdEncyrpt() {
+    public String getPwdEncyrpt() {
         return pwdEncyrpt;
     }
 
-    public void setPwdEncyrpt(byte[] pwdEncyrpt) {
+    public void setPwdEncyrpt(String pwdEncyrpt) {
         this.pwdEncyrpt = pwdEncyrpt;
     }
-    
+
 }

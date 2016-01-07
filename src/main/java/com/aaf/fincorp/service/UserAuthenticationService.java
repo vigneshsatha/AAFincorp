@@ -13,5 +13,5 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public interface UserAuthenticationService {
-     public boolean authenticateUser(UserVO userVO);
+     public UserVO authenticateUser(UserVO userVO);
 }

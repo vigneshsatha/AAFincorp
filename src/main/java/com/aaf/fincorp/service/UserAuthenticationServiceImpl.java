@@ -8,7 +8,6 @@ import com.aaf.fincorp.model.UserVO;
 import com.aaf.fincorp.repository.UserAuthenticateRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 /**
  *
@@ -24,7 +23,7 @@ public class UserAuthenticationServiceImpl implements UserAuthenticationService{
        this.authRepository = authRepository;
    }
    
-   public boolean authenticateUser(UserVO userVO){
+   public UserVO authenticateUser(UserVO userVO){
            return authRepository.authenticateUser(userVO);
    }
 }

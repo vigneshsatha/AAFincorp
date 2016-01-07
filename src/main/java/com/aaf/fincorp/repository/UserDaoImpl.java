@@ -20,28 +20,31 @@ import org.springframework.stereotype.Repository;
 @Repository("authRepository")
 public class UserDaoImpl  implements UserAuthenticateRepo {
     
-    
+   
     SessionFactory sessionFactory;
     
     @Autowired
     public void setSessionFactory(SessionFactory sessionFactory) {
         this.sessionFactory = sessionFactory;
     }
-    public boolean authenticateUser(UserVO userVO){
+    
+    public UserVO authenticateUser(UserVO userVO){
 
         
             Session session = sessionFactory.openSession();
+            session.beginTransaction();
             String query = "FROM UserVO WHERE userName= :usrname"; 
             Query authQuery = session.createQuery(query);
             authQuery.setParameter("usrname", userVO.getUserName());
             List userVOList = authQuery.list();
             for (Iterator it = userVOList.iterator(); it.hasNext();) {
                 UserVO userVO1 = (UserVO) it.next();
-                if(userVO1.getUserName().equals(userVO.getUserName())&&userVO1.getUserPassword().equals(userVO.getUserPassword())){
-                    return true;
-                }
+                userVO.setPwdEncyrpt(userVO1.getPwdEncyrpt());
+                userVO.setPwdKey(userVO1.getPwdKey());
             }
+        if(!session.getTransaction().wasCommitted()){
         session.getTransaction().commit();
-        return false;
+        }
+        return userVO;
     }
 }

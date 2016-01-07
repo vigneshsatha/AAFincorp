@@ -6,7 +6,10 @@ package com.aaf.fincorp.view;
 
 import com.aaf.fincorp.model.UserVO;
 import com.aaf.fincorp.service.UserAuthenticationService;
+import com.aaf.fincorp.utilities.AESEncryptionDecryption;
 import java.awt.Container;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -178,13 +181,28 @@ public class LoginWindow extends javax.swing.JFrame{
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
             // TODO add your handling code here:
         
-        userNameField.getText();
-        passwordField.getText();
         UserVO userVO = new UserVO();
         userVO.setUserName(userNameField.getText());
         userVO.setUserPassword(passwordField.getText());
+        Boolean isAuthenticated = false;
+        UserVO authenticaedUserVO = authenticationService.authenticateUser(userVO);
         
-        Boolean isAuthenticated = true;//authenticationService.authenticateUser(userVO);
+        if(authenticaedUserVO != null){
+            try{
+                byte[] passwordRawByte = AESEncryptionDecryption.hex2byte(authenticaedUserVO.getPwdEncyrpt());
+                byte[] passwordKeyByte = AESEncryptionDecryption.hex2byte(authenticaedUserVO.getPwdKey());
+                
+                String userPassword = AESEncryptionDecryption.decryptData(passwordRawByte,passwordKeyByte);
+            
+                if(userPassword.equals(userVO.getUserPassword())){
+                    isAuthenticated = true;
+                }else{
+                    isAuthenticated = false;
+                }
+                }catch(Exception e){
+                    System.out.print("error occurred while authentication - "+e.toString());
+                }
+        }
         
         if(isAuthenticated){
             
