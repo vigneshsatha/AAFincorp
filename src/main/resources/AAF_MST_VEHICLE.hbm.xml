@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.aaf.fincorp.model.VehicleVO" table="aaf_mst_vehicle">
+        <id name="vehicleId" type="java.lang.Integer">
+            <column name="num_vehicle_id"/>
+            <generator class="assigned"/>
+        </id> 
+        <property name="regNo" type="string">
+            <column name ="vch_vehicle_no" length="30" not-null="true" unique="true"/>
+        </property>
+        <property name="model" type="string">
+            <column name ="vch_vehicle_model" length="100" not-null="true" unique="false"/>
+        </property>
+        <property name="make" type="string">
+            <column name ="vch_vehicle_make" length="100" not-null="true" unique="false"/>
+        </property>
+        <property name="color" type="string" length="50">
+            <column name ="vch_vehicle_color" length="50" not-null="true" unique="false"/>
+        </property>
+        <property name="chassisNo" type="string">
+            <column name ="vch_chassis_no" length="50" not-null="true" unique="false"/>
+        </property>
+        <property name="rcBookNo" type="string">
+            <column name ="vch_rc_book_no" length="50" not-null="true" unique="false"/>
+        </property>
+        <property name="purchaseDate" type="string">
+            <column name ="dtt_purchase_date" length="50" not-null="true" unique="false"/>
+        </property>
+        <property name="chassisNo" type="string">
+            <column name ="dtt_insurance_date" length="50" not-null="true" unique="false"/>
+        </property>
+        <property name="marketValue" type="string">
+            <column name ="num_market_value" length="50" not-null="true" unique="false"/>
+        </property>
+
+    </class>
+</hibernate-mapping>
