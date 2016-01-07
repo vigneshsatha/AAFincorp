@@ -19,6 +19,24 @@ public class VehicleVO {
     private String chassisNo;
     private String createdDate;
     private String modifiedDate;
+    private String rcBookNo;
+
+    public String getRcBookNo() {
+        return rcBookNo;
+    }
+
+    public void setRcBookNo(String rcBookNo) {
+        this.rcBookNo = rcBookNo;
+    }
+
+    public String getPurchaseDate() {
+        return purchaseDate;
+    }
+
+    public void setPurchaseDate(String purchaseDate) {
+        this.purchaseDate = purchaseDate;
+    }
+    private String purchaseDate;
 
     public VehicleVO() {
     }
